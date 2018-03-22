@@ -16,10 +16,12 @@ var api_key = 'AIzaSyD8LQ2J3i5A6T-_uXCBADLj_ZZKwAbgbXw'
 //result.res.statusCode, result.data.length, result.res.headers
 describe('인기 동영상 ', function () {
     var reqUrl = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=1&key=' + api_key
-    
+    var innerUrl = 'https://github.sec.samsung.net'
     it('성공', async function () {
          var result = await app.httpGet(innerUrl)
-         result.res.statusCode.expect(200)         
+         console.log('statusCode : ' + result.res.statusCode)
+         console.log('data : ' + result.data)
+         //result.res.statusCode.expect(200)         
     })
 })
 
